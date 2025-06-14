@@ -7,13 +7,15 @@ import { categoryRoutes } from './routes/categories.js'
 import { cartRoutes } from './routes/cart.js'
 import { userRoutes } from './routes/user.js'
 import { verifyToken } from './middlewares/verifyToken.js'
+import { corsOptions } from './config/corsOptions.js'
 
 dotenv.config()
 const PORT = process.env.PORT
 
 const app = express()
 app.use(express.json())
-app.use(cors())
+
+app.use(cors(corsOptions))
 app.use(cookieParser())
 
 app.get('/protected', verifyToken, (req, res) => {

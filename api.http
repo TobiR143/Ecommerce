@@ -1,20 +1,20 @@
 ###Obtener todas las categorías
-GET http://localhost:3000/api/categories
+GET https://ecommerce-qhiw.onrender.com/api/categories
 
 ### Obtener productos por categoría y precio máximo
-GET http://localhost:3000/api/products?category=audio&maxPrice=100
+GET https://ecommerce-qhiw.onrender.com/api/products?category=audio&maxPrice=100
 
 ### Obtener producto por id
-GET http://localhost:3000/api/products/2
+GET https://ecommerce-qhiw.onrender.com/api/products/2
 
 ###Obtener todos los productos
-GET http://localhost:3000/api/products?offset=30&limit=20
+GET https://ecommerce-qhiw.onrender.com/api/products?offset=30&limit=20
 
 ### Obtener items del carrito de un usuario
-GET http://localhost:3000/api/cart/1
+GET https://ecommerce-qhiw.onrender.com/api/cart/1
 
 ### Agregar un producto al carrito
-POST http://localhost:3000/api/cart/1
+POST https://ecommerce-qhiw.onrender.com/api/cart/1
 Content-Type: application/json
 
 {
@@ -23,7 +23,7 @@ Content-Type: application/json
 }
 
 ### Actualizar la cantidad de un producto en el carrito
-PATCH http://localhost:3000/api/cart/1
+PATCH https://ecommerce-qhiw.onrender.com/api/cart/1
 Content-Type: application/json
 
 {
@@ -32,7 +32,7 @@ Content-Type: application/json
 }
 
 ### Eliminar un producto del carrito
-DELETE http://localhost:3000/api/cart/1
+DELETE https://ecommerce-qhiw.onrender.com/api/cart/1
 Content-Type: application/json
 
 {
@@ -40,10 +40,10 @@ Content-Type: application/json
 }
 
 ### Eliminar todos los productos del carrito
-DELETE http://localhost:3000/api/cart/1/all
+DELETE https://ecommerce-qhiw.onrender.com/api/cart/1/all
 
 ### Login de usuario
-POST http://localhost:3000/api/user/login
+POST https://ecommerce-qhiw.onrender.com/api/user/login
 Content-Type: application/json
 
 {
@@ -52,7 +52,7 @@ Content-Type: application/json
 }
 
 ### Registro de usuario
-POST http://localhost:3000/api/user/register
+POST https://ecommerce-qhiw.onrender.com/api/user/register
 Content-Type: application/json
 
 {
@@ -61,7 +61,7 @@ Content-Type: application/json
 }
 
 ### Logout de usuario
-POST http://localhost:3000/api/user/logout
+POST https://ecommerce-qhiw.onrender.com/api/user/logout
 
 ### Ruta protegida
-GET http://localhost:3000/protected
+GET https://ecommerce-qhiw.onrender.com/protected

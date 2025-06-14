@@ -10,8 +10,8 @@ export class UserController {
         res.status(200)
           .cookie('access_token', token, {
             httpOnly: true,
-            sameSite: 'Strict',
-            secure: process.env.NODE_ENV === 'production',
+            sameSite: 'none',
+            secure: true,
             maxAge: 1000 * 60 * 60
           })
           .json({ message: 'Login successful', user: { id, user } })
@@ -32,8 +32,8 @@ export class UserController {
       if (user) {
         res.cookie('access_token', token, {
           httpOnly: true,
-          sameSite: 'Strict',
-          secure: process.env.NODE_ENV === 'production',
+          sameSite: 'none',
+          secure: true,
           maxAge: 1000 * 60 * 60
         })
         res.status(201).json({ message: 'User registered successfully', user: { id, user } })
@@ -47,8 +47,8 @@ export class UserController {
     res
       .clearCookie('access_token', {
         httpOnly: true,
-        sameSite: 'Strict',
-        secure: process.env.NODE_ENV === 'production'
+        sameSite: 'none',
+        secure: true
       })
       .status(200)
       .json({ message: 'Logged out successfully' })
