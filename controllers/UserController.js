@@ -15,6 +15,7 @@ export class UserController {
             maxAge: 1000 * 60 * 60
           })
           .json({ message: 'Login successful', user: { id, user } })
+        console.log('cookie', req.cookies.access_token, token)
       } else {
         res.status(401).json({ message: 'Invalid username or password' })
       }

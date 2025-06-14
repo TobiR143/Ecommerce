@@ -47,8 +47,8 @@ POST https://ecommerce-qhiw.onrender.com/api/user/login
 Content-Type: application/json
 
 {
-  "username": "newuser",
-  "password": "newpassword"
+  "username": "newuser2",
+  "password": "newpassword1"
 }
 
 ### Registro de usuario
