@@ -14,7 +14,7 @@ export class ProductsModel {
       if (maxPrice) {
         if (category) {
           query += ' AND price <= ?'
-        }
+        } else query += ' price <= ?'
         params.push(maxPrice)
       }
     }

@@ -2,7 +2,7 @@
 GET https://ecommerce-qhiw.onrender.com/api/categories
 
 ### Obtener productos por categoría y precio máximo
-GET https://ecommerce-qhiw.onrender.com/api/products?category=audio&maxPrice=100
+GET https://ecommerce-qhiw.onrender.com/api/products?category=audio&maxPrice=10
 
 ### Obtener producto por id
 GET https://ecommerce-qhiw.onrender.com/api/products/2

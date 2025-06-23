@@ -14,7 +14,6 @@ export class UserController {
             secure: true,
             maxAge: 1000 * 60 * 60
           })
-        console.log('cookie', req.cookies.access_token, token)
         res.json({ message: 'Login successful', user: { id, user } })
       } else {
         res.status(401).json({ message: 'Invalid username or password' })
@@ -38,6 +37,8 @@ export class UserController {
           maxAge: 1000 * 60 * 60
         })
         res.status(201).json({ message: 'User registered successfully', user: { id, user } })
+      } else {
+        res.status(401).json({ message: 'User already exists' })
       }
     } catch (error) {
       res.status(500).json({ error: error.message })
