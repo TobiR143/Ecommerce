@@ -62,8 +62,8 @@ export class CartModel {
 
       const sqlUpdate = `
           UPDATE CartItem
-          SET quantity = ?, 
-              total = ?
+          SET quantity = + ?, 
+              total = + ?
           WHERE idUser = ? AND idProduct = ?`
       await db.execute(sqlUpdate, [quantity, priceUpdate, userId, productId])
     } catch (error) {
