@@ -1,1 +1,1 @@
-export const API_URL = 'https://ecommerce-qhiw.onrender.com'
+export const API_URL = 'https://ecommerce-cvj6.onrender.com'
