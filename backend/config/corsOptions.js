@@ -1,6 +1,6 @@
 const allowedOrigins = [
   'https://localhost:5173',
-  'https://ecommerce-frontend-48ce.onrender.com/'
+  'https://ecommerce-frontend-48ce.onrender.com'
 ]
 
 export const corsOptions = {
