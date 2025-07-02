@@ -1,0 +1,120 @@
+.auth-forms {
+    display: flex;
+    justify-content: center;
+    height: calc(100vh - 60px);
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.login-form-container, .register-form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--backgroundColorCard);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.is-registered-question {
+    margin: 0;
+    color: var(--lightColor);
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.login-form, .register-form {
+    font-family: system-ui;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px 10px 0 10px;
+    min-width: 300px;
+    max-width: 100%;
+    min-height: 300px;
+}
+
+.login-form-title, .register-form-title {
+    font-size: 1.2rem;
+    color: var(--color);
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+    width: 100%;
+}
+
+.input-container .username-label, .input-container .password-label {
+    color: var(--lightColor);
+    font-size: .9rem;
+}
+
+#username, #password {
+    border: none;
+    padding: 4px 8px;
+    background: #e3f6f6;
+    color: var(--backgroundColorCard);
+    border-bottom: 4px solid var(--lightColor);
+    outline: none;
+}
+
+.submit-form {
+    margin-top: 20px;
+    font-family: system-ui;
+    font-weight: 500;
+    width: 100%;
+    border: none;
+    background-color: var(--lightColor);
+    padding: 4px 6px;
+    color: var(--backgroundColorCard);
+    cursor: pointer;
+}
+
+.error {
+    max-width: 100%;
+    color: #d83434;
+    font-size: .7rem;
+}
+
+.error-message {
+    margin-top: 10px;
+    color: var(--lightColor);
+}
+
+@media only screen and (max-width: 480px) {
+    .login-form-container, .register-form-container {
+        max-width: 200px;
+        margin: 20px;
+    }
+
+    .login-form-title, .register-form-title {
+        font-size: 1rem;
+    }
+
+    .input-container, .submit-form {
+        max-width: 180px;
+    }
+
+    .input-container .username-label, .input-container .password-label {
+        font-size: .7rem;
+    }
+
+    .is-registered-question {
+        font-size: .8rem;
+    }
+
+    #username, #password {
+        padding: 2px 4px;
+        border-bottom: 3px solid var(--lightColor);
+        font-size: .7rem;
+    }
+
+    .error {
+        max-width: 100%;
+        color: #d83434;
+        font-size: .5rem;
+    }
+}

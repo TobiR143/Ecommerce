@@ -1,0 +1,107 @@
+:root {
+    --color: #477ca2;
+    --bgColor: #283843;
+    --buttonHoverColor: #225776;
+    --buttonActiveColor: #284960;
+    --backgroundColorCard: #1c2730;
+    --lightColor: #bab5e4;
+}
+
+body {
+    margin: 0;
+    background: var(--bgColor)
+}
+
+.no-products, .no-more-products {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 140px);
+  justify-content: center;
+  align-items: center;
+}
+
+.no-more-products {
+    height: 100px;
+    max-width: 200px;
+    margin: 20px auto;
+    background: var(--backgroundColorCard);
+    color: var(--lightColor);
+    font-family: system-ui;
+    font-size: 1rem;
+}
+
+.no-products p {
+  background-color: var(--backgroundColorCard);
+  color: var(--lightColor);
+  padding: 20px 30px;
+  font-size: 1rem;
+  font-family: system-ui;
+}
+
+.product-list {
+    display: grid;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.filters {
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+}
+
+.select-categories, .filter-input-container, .filter-button-submit {
+    margin: 0 10px;
+}
+
+#maxPrice {
+    width: 50%;
+    display: flex;
+    justify-self: center;
+    outline: none;
+    border: none;
+    background-color: var(--backgroundColorCard);
+    color: var(--lightColor);
+    padding: 8px;
+    text-align: center;
+}
+
+#maxPrice::-webkit-inner-spin-button,
+#maxPrice::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.filter-button-submit {
+    background: var(--buttonActiveColor);
+    padding: 8px 18px;
+    border: none;
+    cursor: pointer;
+    color: #dcecf9;
+    flex: .2;
+}
+
+@media only screen and (max-width: 480px) {
+    .filters {
+        width: 100%;
+        gap: 5px;
+        flex-wrap: wrap;
+    }
+
+    .select-categories {
+        width: 100%;
+    }
+
+    .filter-input-container {
+        width: 100%;
+    }
+
+    .span-select {
+        font-size: .6rem;
+    }
+}

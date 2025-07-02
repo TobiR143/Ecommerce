@@ -1,0 +1,65 @@
+.select-categories {
+  position: relative;
+  flex: .1;
+  font-size: 0.8rem;
+  font-weight: 500;
+  font-family: system-ui;
+  user-select: none;
+  text-align: center;
+}
+
+.span-select {
+  background-color: var(--backgroundColorCard);
+  color: var(--lightColor);
+  padding: 8px 18px;
+  cursor: pointer;
+  font-weight: 600;
+  width: 164px;
+  text-transform: capitalize;
+  display: inline-block;
+  transition: background-color 0.2s ease;
+}
+
+.options-select-container::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: 20px; 
+  width: 0;
+  height: 0;
+  border-left: 11px solid transparent;
+  border-right: 11px solid transparent;
+  border-bottom: 11px solid var(--backgroundColorCard);
+}
+
+.options-select-container {
+  background-color: var(--backgroundColorCard);
+  position: absolute;
+  top: 130%;
+  width: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+}
+
+.option-category {
+  text-transform: capitalize;
+  padding: 8px 18px;
+  color: #e3e4f9;
+  background-color: #23323c;
+  cursor: pointer;
+  text-align: center;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.option-category:hover {
+  background-color: var(--backgroundColorCard);
+  color: var(--lightColor);
+}
+
+.option-category.selected {
+  background-color: var(--backgroundColorCard);
+  font-weight: bold;
+  color: var(--lightColor);
+}
