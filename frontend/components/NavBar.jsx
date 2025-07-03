@@ -51,7 +51,7 @@ export const NavBar = () => {
             </li>
           ) : (
             <NavLink to="/login" className="nav-li">
-              <button className="login-button">Iniciar Sesión</button>
+              <button className="login-button">Log in</button>
             </NavLink>
           )}
 
