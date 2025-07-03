@@ -10,6 +10,8 @@ export const ProductPage = () => {
   const { addToCart } = useContext(CartContext);
   const [quantity, setQuantity] = useState(1);
 
+  console.log(product, isLoading);
+
   const handleClick = () => {
     addToCart(product.id, quantity);
     setQuantity(1);

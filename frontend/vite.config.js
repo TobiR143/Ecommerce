@@ -10,5 +10,6 @@ export default defineConfig({
       key: fs.readFileSync('./localhost-key.pem'),
       cert: fs.readFileSync('./localhost.pem'),
     }
-  }
+  },
+  base: '/'
 });
