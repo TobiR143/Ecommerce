@@ -4,13 +4,18 @@ import "../styles/ProductPage.css";
 import { CaretDownIcon, CaretUpIcon } from "../icons/Icons.jsx";
 import { Loader } from "../components/Loader.jsx";
 import { CartContext } from "../contexts/cartContext.jsx";
+import { UserContext } from "../contexts/userContext.jsx";
+import { useNavigate } from "react-router-dom";
 
 export const ProductPage = () => {
   const { isLoading, product } = useProductData();
   const { addToCart } = useContext(CartContext);
+  const { userData } = useContext(UserContext);
   const [quantity, setQuantity] = useState(1);
+  const navigate = useNavigate();
 
   const handleClick = () => {
+    if (!userData) navigate("/login");
     addToCart(product.id, quantity);
     setQuantity(1);
   };

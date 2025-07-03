@@ -68,5 +68,19 @@
     font-weight: 600;
 }
 
+@media only screen and (max-width: 480px) {
+    .product-price {
+        font-size: .9rem;
+    }
+
+    .add-to-cart-button, .view-details-link {
+        font-size: .6rem;
+    }
+
+    .add-to-cart-button {
+        text-wrap: nowrap;
+    }
+}
+
 
 

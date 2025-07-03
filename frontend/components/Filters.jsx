@@ -30,45 +30,47 @@ export const Filters = () => {
 
   return (
     <form className="filters" onSubmit={handleSubmit}>
-      {categories.length > 0 && (
-        <div className="select-categories">
-          <span className="span-select" onClick={handleClick}>
-            {selectedCategory}
-          </span>
-          <div>
-            {isOpen && (
-              <div className="options-select-container">
-                <div
-                  className={`option-category ${
-                    selectedCategory === "All Categories" ? "selected" : ""
-                  }`}
-                  onClick={() => handleSelect("All Categories")}
-                >
-                  All Categories
-                </div>
-                {categories.map((category) => (
+      <div className="filters-container">
+        {categories.length > 0 && (
+          <div className="select-categories">
+            <span className="span-select" onClick={handleClick}>
+              {selectedCategory}
+            </span>
+            <div>
+              {isOpen && (
+                <div className="options-select-container">
                   <div
-                    key={category.name}
                     className={`option-category ${
-                      selectedCategory === category.name ? "selected" : ""
+                      selectedCategory === "All Categories" ? "selected" : ""
                     }`}
-                    onClick={() => handleSelect(category.name)}
+                    onClick={() => handleSelect("All Categories")}
                   >
-                    {category.name}
+                    All Categories
                   </div>
-                ))}
-              </div>
-            )}
+                  {categories.map((category) => (
+                    <div
+                      key={category.name}
+                      className={`option-category ${
+                        selectedCategory === category.name ? "selected" : ""
+                      }`}
+                      onClick={() => handleSelect(category.name)}
+                    >
+                      {category.name}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
           </div>
+        )}
+        <div className="filter-input-container">
+          <input
+            onChange={handleChange}
+            id="maxPrice"
+            placeholder="Max price"
+            type="number"
+          />
         </div>
-      )}
-      <div className="filter-input-container">
-        <input
-          onChange={handleChange}
-          id="maxPrice"
-          placeholder="Max price"
-          type="number"
-        />
       </div>
       <button className="filter-button-submit" type="submit">
         Filter
