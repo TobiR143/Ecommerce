@@ -12,7 +12,7 @@ import { CartProvider } from "../contexts/cartContext.jsx";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/">
       <UserProvider>
         <CartProvider>
           <ProductProvider>

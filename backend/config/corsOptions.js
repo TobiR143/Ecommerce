@@ -1,6 +1,6 @@
 const allowedOrigins = [
   'https://localhost:5173',
-  'https://ecommerce-frontend-48ce.onrender.com'
+  'https://lucent-faun-4b8040.netlify.app'
 ]
 
 export const corsOptions = {
