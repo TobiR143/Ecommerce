@@ -28,9 +28,8 @@ node_modules/
 
 #Keys
 
-frontend/localhost-key.pem
-frontend/localhost.pem
+/frontend/.pem
 
 #config
 
-frontend/eslint.config.js
+/frontend/eslint.config.js
