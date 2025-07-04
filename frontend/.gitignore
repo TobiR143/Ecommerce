@@ -22,3 +22,15 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+#Modules
+node_modules/
+
+#Keys
+
+localhost-key.pem
+localhost.pem
+
+#config
+
+eslint.config.js
