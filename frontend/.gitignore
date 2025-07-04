@@ -23,9 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 
-#Modules
-node_modules/
-
 #Keys
 
 /frontend/*.pem
