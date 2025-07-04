@@ -28,7 +28,7 @@ node_modules/
 
 #Keys
 
-/frontend/.pem
+/frontend/*.pem
 
 #config
 
