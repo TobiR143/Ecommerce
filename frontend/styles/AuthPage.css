@@ -81,6 +81,8 @@
 
 .error-message {
     margin-top: 10px;
+    font-family: system-ui;
+    font-size: -7rem;
     color: var(--lightColor);
 }
 
@@ -112,7 +114,7 @@
         font-size: .7rem;
     }
 
-    .error {
+    .error-message {
         max-width: 100%;
         color: #d83434;
         font-size: .5rem;
