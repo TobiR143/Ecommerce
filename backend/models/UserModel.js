@@ -8,12 +8,9 @@ export class UserModel {
 
       const response = await db.execute('SELECT id FROM User WHERE username = ?', [username])
 
-      const newUser = { id: response.rows[0], username, password }
+      const newUser = { id: response.rows[0].id, username }
 
-      return {
-        id: newUser.id,
-        user: newUser.username
-      }
+      return newUser
     } catch (error) {
       throw new Error('Error registering user: ' + error.message)
     }

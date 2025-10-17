@@ -58,7 +58,11 @@ export const UserProvider = ({ children }) => {
       });
       if (response.ok) {
         const data = await response.json();
-        setUserData({ username: data.user.user });
+        console.log(data);
+        setUserData({
+          username: data.user.username,
+          id: data.user.id,
+        });
       } else {
         setMessage("User already exists");
       }

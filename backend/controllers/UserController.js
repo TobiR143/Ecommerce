@@ -44,15 +44,20 @@ export class UserController {
     try {
       if (!username || !password) return res.status(400).json({ message: 'Username and password are required' })
 
-      const { username: existingUsername } = await UserModel.getUserByUsername(username)
+      const existingUsername = await UserModel.getUserByUsername(username)
 
       if (existingUsername) return res.status(409).json({ message: 'User already exists' })
 
       const hashedPassword = await bcrypt.hash(password, parseInt(process.env.SALT_ROUNDS))
-      const { id, user } = await UserModel.register(username, hashedPassword)
+      const { id, username: user } = await UserModel.register(username, hashedPassword)
+
+      const newUser = {
+        id,
+        username: user
+      }
 
       const token = jwt.sign(
-        { id, username: user },
+        { user: newUser },
         process.env.JWT_SECRET,
         { expiresIn: '1h' }
       )
@@ -64,7 +69,7 @@ export class UserController {
           secure: true,
           maxAge: 1000 * 60 * 60
         })
-        res.status(201).json({ message: 'User registered successfully', user: { id, user } })
+        res.status(201).json({ message: 'User registered successfully', user: newUser })
       } else {
         return res.status(400).json({ message: 'User registration failed' })
       }
